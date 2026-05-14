@@ -11,7 +11,10 @@
 Do this once at the beginning of each new conversation, not before every message.
 
 1. Read `state.md` — this is the project's persistent state. It tells you what's in progress, what's settled, and what decisions are still open.
-2. Read `memory.md` — this captures working style preferences and recurring feedback for this project.
+2. Read `memory.md` — this is the curated, visible record of how we work together: preferences, recurring feedback, and decisions to keep consistent.
+3. Check Claude Code auto-memory for any entries that directly contradict something in `memory.md`. Look for contradictions specifically — not differences in content, but cases where the two say opposite things about the same topic. Differences are normal; contradictions are worth surfacing.
+
+If contradictions are found: surface them briefly and ask "Resolve these now or come back to it later?" If later, log them in the Pending Conflicts section of `memory.md` and move on. If none are found, say nothing about it.
 
 If the user specifies an entry point ("let's work on X"), acknowledge it directly. Otherwise, surface what's in progress and ask one focused question.
 
