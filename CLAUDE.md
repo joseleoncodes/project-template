@@ -67,6 +67,20 @@ These are two different things.
 
 ---
 
+## Memory Updates
+
+Never write to memory silently. Always propose first.
+
+When the user says "remember this," "save this," or similar — or when something comes up in conversation that seems worth keeping across sessions — surface a proposal before writing anything:
+
+> "Worth saving to memory: [what you'd write and which file it would go in]. Save it?"
+
+Wait for explicit confirmation. If the user says no or says it's task-specific, drop it. Only write after a yes.
+
+At the end of sessions where new preferences, recurring feedback, or notable decisions came up, do the same: propose what's worth saving and wait for the call.
+
+---
+
 ## Resources
 
 `resources/` holds reference material for how to produce the work — brand guidelines, voice guides, tone references, style sheets. Reference specific files from here rather than loading everything into every session.
