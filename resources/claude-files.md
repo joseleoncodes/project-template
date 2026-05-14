@@ -250,3 +250,35 @@ Putting it all together:
   - They override broader rules when Claude is working in that subtree.
 
 If you want to explicitly encode “state-like” behavior (e.g., running a multi-step workflow, summarizing a workspace), you generally use commands or skills plus `CLAUDE.md` instructions, while “memory” for that workflow would live in your rules / memory files.
+
+---
+
+## Conversation management tools
+
+Claude Code has three tools for undoing or branching a conversation. They appear when you hover over a message in the thread.
+
+### Fork conversation from here
+
+Branches the conversation at that message into a new separate thread. The original thread is untouched. Files on disk do not change.
+
+**When to use:** The conversation went in the wrong direction, or you accidentally pasted context meant for a different project into this thread. Fork from the last good message and continue in the new branch. The original stays intact for reference.
+
+---
+
+### Rewind code to here
+
+Reverts all file changes Claude made after that message back to what they were at that point. The conversation history stays visible — only the files change.
+
+**When to use:** Claude went down a bad path and made file changes you don't want — whether that's source code in a dev project or documents and markdown files in a content project. Rewind gets the files back without manual undoing.
+
+**Important — if you back up to GitHub:** Rewind code is most useful *before* you've committed. Once changes are committed and pushed, use git instead (`git revert` or `git checkout`) — it's more precise and won't create a divergence between your local files and what's on GitHub. If you rewind code after pushing, your local state and GitHub will be out of sync.
+
+---
+
+### Fork conversation and rewind code
+
+Does both at the same time: branches the conversation into a new thread AND reverts the files to match that point.
+
+**When to use:** Both things went wrong together — the conversation drifted in the wrong direction AND Claude made file changes you don't want. Use this when continuing from the current conversation would be confusing even if the files were fixed, and you want a clean slate on both without losing the original thread.
+
+**Important — if you back up to GitHub:** The same caveat as Rewind code applies here. The rewind part of this tool reverts local files, but anything already committed and pushed stays on GitHub — leaving your local state and GitHub out of sync. This warning matters even more here: by the time both the conversation and the files have gone wrong badly enough to reach for this option, there's a good chance something was already committed along the way. Check your git status before using it, and if commits have been pushed, use git to handle the file revert instead.
