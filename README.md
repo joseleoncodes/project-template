@@ -18,10 +18,11 @@ A reusable starting point for any project that uses Claude Code or Claude Co-wor
 ## How to use for a new project
 
 1. Clone or copy this repo into your new project directory.
-2. Fill in the `[FILL IN]` and `[PROJECT NAME]` placeholders in each file.
-3. Delete instructions and example entries you don't need.
-4. Populate `resources/` with any brand, voice, or style reference files.
-5. Open a Claude session and it will load `CLAUDE.md` automatically.
+2. **Copy the contents of the repo to your project root — not the folder itself.** `CLAUDE.md`, `memory.md`, `state.md`, and `resources/` should sit at the root of your project, not inside a `project-template/` subfolder.
+3. Fill in the `[FILL IN]` and `[PROJECT NAME]` placeholders in each file.
+4. Delete instructions and example entries you don't need.
+5. Populate `resources/` with any brand, voice, or style reference files.
+6. Open a Claude session and it will load `CLAUDE.md` automatically.
 
 ---
 
