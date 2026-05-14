@@ -49,9 +49,8 @@ Example entries:
 
 ## Behavior Rules
 
-These apply to all projects by default. Override or add to them below if needed.
+Project-specific rules. Universal behavior rules (outcome-first language, write naturally) are inherited from user-level CLAUDE.md.
 
-- Outcome-first language: lead with the result, not the process.
 - Plain language. Match the reading level of the intended audience.
 - No AI-tells. Write naturally, not performatively.
 - Do not apply editorial critique during ideation. Evaluate substance first; polish comes after.
@@ -67,20 +66,6 @@ These are two different things.
 **State** is what's in progress right now: active work, settled decisions, open threads. It lives in `state.md` (or wherever the project's plugin writes it). Read this at session start.
 
 **Memory** is how we work together: preferences, feedback, recurring corrections. It lives in Claude Code's auto-memory system (`~/.claude/projects/.../memory/`). Claude writes to it automatically; you can read and edit those files directly.
-
----
-
-## Memory Updates
-
-Never write to memory silently. Always propose first.
-
-When the user says "remember this," "save this," or similar — or when something comes up in conversation that seems worth keeping across sessions — surface a proposal before writing anything:
-
-> "Worth saving to memory: [what you'd write and which file it would go in]. Save it?"
-
-Wait for explicit confirmation. If the user says no or says it's task-specific, drop it. Only write after a yes.
-
-At the end of sessions where new preferences, recurring feedback, or notable decisions came up, do the same: propose what's worth saving and wait for the call.
 
 ---
 
